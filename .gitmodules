@@ -4,15 +4,15 @@
 	branch = master
 [submodule "deps/k8s"]
 	path = deps/k8s
-	url = https://github.com/5GC-DEV/aether-k8s-cdac.git
+	url = https://github.com/5GC-DEV/cdac-k8s.git
 	branch = cdacmaster
 [submodule "deps/5gc"]
 	path = deps/5gc
-	url = https://github.com/5GC-DEV/aether-5gc-cdac.git
+	url = https://github.com/5GC-DEV/cdac-5gc.git
 	branch = cdacmaster
 [submodule "deps/amp"]
 	path = deps/amp
-	url = https://github.com/5GC-DEV/aether-amp-cdac.git
+	url = https://github.com/5GC-DEV/cdac-amp.git
 	branch = cdacmaster
 [submodule "deps/4gc"]
 	path = deps/4gc
@@ -24,8 +24,12 @@
 	branch = master
 [submodule "deps/ueransim"]
 	path = deps/ueransim
-	url = https://github.com/5GC-DEV/aether-ueransim-cdac.git
+	url = https://github.com/5GC-DEV/cdac-ueransim.git
 	branch = cdacmaster
 [submodule "deps/aether-oai"]
 	path = deps/oai
 	url = https://github.com/opennetworkinglab/aether-oai.git
+[submodule "deps/srsran"]
+	path = deps/srsran
+	url = https://github.com/opennetworkinglab/aether-srsran.git
+	branch = master

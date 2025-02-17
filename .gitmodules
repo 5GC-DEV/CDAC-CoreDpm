@@ -9,7 +9,7 @@
 [submodule "deps/5gc"]
 	path = deps/5gc
 	url = https://github.com/5GC-DEV/cdac-5gc.git
-	branch = cdacmaster
+	branch = ims
 [submodule "deps/amp"]
 	path = deps/amp
 	url = https://github.com/5GC-DEV/cdac-amp.git

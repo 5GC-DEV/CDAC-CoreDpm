@@ -17,8 +17,10 @@ k8s:
 core:
   standalone: true		# set to false to place under control of ROC
   data_iface: enp0s3
-  values_file: "deps/5gc/roles/core/templates/cdac5gc-5g-values.yaml" # CDAC Core images
-  # values_file: "deps/5gc/roles/core/templates/iosmcn-5g-values.yaml" # IOSMCN Core images
+  values_file: "deps/5gc/roles/core/templates/cdac5gc-5g-values.yaml" # CDAC Core images for single DNN - Internet
+  # values_file: "deps/5gc/roles/core/templates/cdac5gc-5g-multiple-dnn-ims-values.yaml" # CDAC Core images for IMS
+  # values_file: "deps/5gc/roles/core/templates/iosmcn-5g-values.yaml" # IOSMCN Core images for single DNN - Internet
+  # values_file: "deps/5gc/roles/core/templates/iosmcn-5g-multiple-dnn-ims-values.yaml" # IOSMCN Core images for IMS
   # values_file: "deps/5gc/roles/core/templates/sdcore-5g-values.yaml" # OMEC Core images
   ran_subnet: ""	# set to empty string to get subnet from 'data_iface'
   helm:
@@ -34,6 +36,11 @@ core:
         access: "192.168.252.3"
         core:   "192.168.250.3"
       ue_ip_pool: "172.250.0.0/16"
+    IMS_upf:
+      ip:
+        access: "192.168.232.3"
+        core:   "192.168.230.3"
+      ue_ip_pool: "172.252.0.0/16"
   amf:
     ip: "10.176.27.204"
 

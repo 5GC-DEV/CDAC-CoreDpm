@@ -18,7 +18,9 @@ core:
   standalone: true		# set to false to place under control of ROC
   data_iface: enp0s3
   values_file: "deps/5gc/roles/core/templates/cdac5gc-5g-values.yaml" # CDAC Core images
+  values_file: "deps/5gc/roles/core/templates/cdac5gc-5g-multiple-dnn-ims-values.yaml" # CDAC Core images for IMS
   # values_file: "deps/5gc/roles/core/templates/iosmcn-5g-values.yaml" # IOSMCN Core images
+  # values_file: "deps/5gc/roles/core/templates/iosmcn-5g-multiple-dnn-ims-values.yaml" # IOSMCN Core images for IMS
   # values_file: "deps/5gc/roles/core/templates/sdcore-5g-values.yaml" # OMEC Core images
   ran_subnet: ""	# set to empty string to get subnet from 'data_iface'
   helm:

@@ -17,15 +17,15 @@ k8s:
 core:
   standalone: true		# set to false to place under control of ROC
   data_iface: enp0s3
-  values_file: "deps/5gc/roles/core/templates/cdac5gc-5g-values.yaml" # CDAC Core images for single DNN - Internet
+  # values_file: "deps/5gc/roles/core/templates/cdac5gc-5g-values.yaml" # CDAC Core images for single DNN - Internet
   # values_file: "deps/5gc/roles/core/templates/cdac5gc-5g-multiple-dnn-ims-values.yaml" # CDAC Core images for IMS
   # values_file: "deps/5gc/roles/core/templates/iosmcn-5g-values.yaml" # IOSMCN Core images for single DNN - Internet
-  # values_file: "deps/5gc/roles/core/templates/iosmcn-5g-multiple-dnn-ims-values.yaml" # IOSMCN Core images for IMS
+  values_file: "deps/5gc/roles/core/templates/iosmcn-5g-multiple-dnn-ims-values.yaml" # IOSMCN Core images for IMS
   # values_file: "deps/5gc/roles/core/templates/sdcore-5g-values.yaml" # OMEC Core images
   ran_subnet: ""	# set to empty string to get subnet from 'data_iface'
   helm:
     local_charts: true			# set chart_ref to local path name if true
-    chart_ref: /home/ios5gn/ios-mcn-core-helm-chart/sdcore-helm-chartse
+    chart_ref: /home/ios5gn/ios-mcn-core-helm-chart/sdcore-helm-charts
     chart_version: 2.1.0
   upf:
     access_subnet: "192.168.252.1/24"	# access subnet & gateway

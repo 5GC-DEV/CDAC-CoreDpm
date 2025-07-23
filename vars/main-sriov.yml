@@ -1,6 +1,6 @@
 k8s:
   rke2:
-    version: v1.23.4+rke2r1
+    version: v1.24.17+rke2r1
     config:
       token: purdue-k8s-rke2
       port: 9345
@@ -8,11 +8,8 @@ k8s:
         master: "deps/k8s/roles/rke2/templates/master-config.yaml"
         worker: "deps/k8s/roles/rke2/templates/worker-config.yaml"
 
-  kubectl:
-    version: v1.23.15
-
   helm:
-    version: v3.10.3
+    version: v3.17.0
 
 core:
   standalone: true			# set to false to place under control of ROC
@@ -22,7 +19,7 @@ core:
   helm:
     local_charts: false			# set chart_ref to local path name if true
     chart_ref: aether/sd-core
-    chart_version: 2.1.0
+    chart_version: 2.2.9
   upf:
     access_subnet: "192.168.252.1/24"	# access subnet & gateway
     core_subnet: "192.168.250.1/24"	# core subnet & gateway
@@ -31,6 +28,7 @@ core:
     #    - make sure at least two VF devices are created out of 'data_iface'
     #      and these devices are attached to vfio-pci driver;
     #    - use 'sdcore-5g-sriov-values.yaml' file for 'values_file' (above).
+    multihop_gnb: false			# set to true to override default N3 subnet
     default_upf:
       ip:
         access: "192.168.252.3"
@@ -42,7 +40,7 @@ core:
 gnbsim:
   docker:
     container:
-      image: omecproject/5gc-gnbsim:rel-1.6.0
+      image: omecproject/5gc-gnbsim:rel-1.6.2
       prefix: gnbsim
       count: 1
     network:

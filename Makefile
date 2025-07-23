@@ -21,49 +21,49 @@ export EXTRA_VARS ?= "@$(AETHER_ROOT_DIR)/vars/main.yml"
 
 
 #### Validate Ansible Configuration ####
-aether-pingall:
+iosmcn-pingall:
 	echo $(AETHER_ROOT_DIR)
 	ansible-playbook -i $(HOSTS_INI_FILE) $(AETHER_ROOT_DIR)/pingall.yml \
 		--extra-vars "ROOT_DIR=$(ROOT_DIR)" --extra-vars $(EXTRA_VARS)
 
 #### Provision AETHER Components for 5G ####
-aether-k8s-install: k8s-install
-aether-k8s-uninstall: k8s-uninstall
-aether-5gc-install: 5gc-install
-aether-5gc-uninstall: 5gc-uninstall
-aether-gnbsim-install: gnbsim-install
-aether-gnbsim-uninstall: gnbsim-uninstall
-aether-amp-install: amp-install
-aether-amp-uninstall: amp-uninstall
-aether-sdran-install: sdran-install
-aether-sdran-uninstall: sdran-uninstall
-aether-ueransim-install: ueransim-install
-aether-ueransim-uninstall: ueransim-uninstall
-aether-oai-gnb-install: oai-gnb-install
-aether-oai-gnb-uninstall: oai-gnb-uninstall
-aether-oai-uesim-start: oai-uesim-start
-aether-oai-uesim-stop: oai-uesim-stop
-aether-srsran-gnb-install: srsran-gnb-install
-aether-srsran-gnb-uninstall: srsran-gnb-uninstall
-aether-srsran-uesim-start: srsran-uesim-start
-aether-srsran-uesim-stop: srsran-uesim-stop
+iosmcn-k8s-install: k8s-install
+iosmcn-k8s-uninstall: k8s-uninstall
+iosmcn-5gc-install: 5gc-install
+iosmcn-5gc-uninstall: 5gc-uninstall
+iosmcn-gnbsim-install: gnbsim-install
+iosmcn-gnbsim-uninstall: gnbsim-uninstall
+iosmcn-amp-install: amp-install
+iosmcn-amp-uninstall: amp-uninstall
+iosmcn-sdran-install: sdran-install
+iosmcn-sdran-uninstall: sdran-uninstall
+iosmcn-ueransim-install: ueransim-install
+iosmcn-ueransim-uninstall: ueransim-uninstall
+iosmcn-oai-gnb-install: oai-gnb-install
+iosmcn-oai-gnb-uninstall: oai-gnb-uninstall
+iosmcn-oai-uesim-start: oai-uesim-start
+iosmcn-oai-uesim-stop: oai-uesim-stop
+iosmcn-srsran-gnb-install: srsran-gnb-install
+iosmcn-srsran-gnb-uninstall: srsran-gnb-uninstall
+iosmcn-srsran-uesim-start: srsran-uesim-start
+iosmcn-srsran-uesim-stop: srsran-uesim-stop
 
 #### Shortcut for QuickStart Only ####
-aether-install: k8s-install 5gc-install gnbsim-install amp-install
-aether-uninstall: monitor-uninstall roc-uninstall gnbsim-uninstall 5gc-uninstall k8s-uninstall
+iosmcn-install: k8s-install 5gc-install gnbsim-install amp-install
+iosmcn-uninstall: monitor-uninstall roc-uninstall gnbsim-uninstall 5gc-uninstall k8s-uninstall
 
 #### Provision AETHER for 4G ####
 #### 4G/5G share router role ####
-aether-4gc-install: 4gc-core-install 5gc-router-install
-aether-4gc-uninstall: 4gc-core-uninstall 5gc-router-uninstall
+iosmcn-4gc-install: 4gc-core-install 5gc-router-install
+iosmcn-4gc-uninstall: 4gc-core-uninstall 5gc-router-uninstall
 
 #### Other Useful Targets ####
-aether-resetcore: 5gc-core-uninstall 5gc-core-install
-aether-reset4gcore: 4gc-core-uninstall 4gc-core-install
-aether-gnbsim-run: gnbsim-simulator-run
-aether-add-upfs: 5gc-upf-install
-aether-remove-upfs: 5gc-upf-uninstall
-aether-ueransim-run: ueransim-run
+iosmcn-5gc-reset: 5gc-core-reset
+iosmcn-4gc-reset: 4gc-core-uninstall 4gc-core-install
+iosmcn-gnbsim-run: gnbsim-simulator-run
+iosmcn-add-upfs: 5gc-upf-install
+iosmcn-remove-upfs: 5gc-upf-uninstall
+iosmcn-ueransim-run: ueransim-run
 
 # Rules:
 #	amp-install: roc-install roc-load monitor-install monitor-load

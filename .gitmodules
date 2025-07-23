@@ -1,7 +1,7 @@
 [submodule "deps/gnbsim"]
 	path = deps/gnbsim
 	url = https://github.com/opennetworkinglab/aether-gnbsim.git
-	branch = master
+	branch = main
 [submodule "deps/k8s"]
 	path = deps/k8s
 	url = https://github.com/5GC-DEV/cdac-k8s.git
@@ -17,11 +17,11 @@
 [submodule "deps/4gc"]
 	path = deps/4gc
 	url = https://github.com/opennetworkinglab/aether-4gc.git
-	branch = master
+	branch = main
 [submodule "deps/sdran"]
 	path = deps/sdran
 	url = https://github.com/opennetworkinglab/aether-sdran.git
-	branch = master
+	branch = main
 [submodule "deps/ueransim"]
 	path = deps/ueransim
 	url = https://github.com/5GC-DEV/cdac-ueransim.git
